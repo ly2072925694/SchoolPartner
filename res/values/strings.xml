@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SchoolPartner</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="person">个人</string>
+    <string name="homepage">主页</string>
+    <string name="find">搜索</string>
+    <string name="hot">首页</string>
+    <string name="message">功能</string>
+    <string name="click_color">#B60E16</string>
+
+    <!-- 12星座 -->
+    <string-array name="constellation">
+        <item>水瓶座</item>
+        <item>双鱼座</item>
+        <item>白羊座</item>
+        <item>金牛座</item>
+        <item>双子座</item>
+        <item>巨蟹座</item>
+        <item>狮子座</item>
+        <item>处女座</item>
+        <item>天枰座</item>
+        <item>天蝎座</item>
+        <item>射手座</item>
+        <item>摩羯座</item>
+    </string-array>
+</resources>

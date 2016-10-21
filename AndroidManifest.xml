@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.schoolpartner"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="20" />
+	<uses-permission android:name="android.permission.INTERNET" />  
+	    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />  
+	    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />  
+	    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />  
+	    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />  
+	    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />  
+	    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.NoActionBar" 
+        android:name="com.cpu.activity.MyApplication">
+        <activity
+            android:name="com.cpu.activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.cpu.activity.Send"></activity>
+        <activity android:name="com.cpu.activity.About"></activity>
+        <activity android:name="com.cpu.activity.Clear"></activity>
+        <activity android:name="com.cpu.activity.Group"></activity>
+        <activity android:name="com.cpu.activity.Examine"></activity>
+        <activity android:name="com.cpu.activity.RegisterMessage"></activity>
+        <activity android:name="com.cpu.activity.RegisterPassword"></activity>
+        <activity android:name="com.cpu.activity.InterestListActivity"></activity>
+        <activity android:name="com.cpu.activity.MyInfoActivity"></activity>
+        <activity android:name="com.cpu.activity.NoticeActivity"></activity>
+        <activity  
+            android:name="cn.sharesdk.framework.AuthorizeActivity"  
+            android:configChanges="keyboardHidden|orientation"  
+            android:screenOrientation="portrait"  
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"  
+            android:windowSoftInputMode="stateHidden|adjustResize" >            
+        </activity>
+        <activity android:name="com.cpu.activity.Detail"></activity> 
+        <activity android:name="com.cpu.activity.GalleryActivity"></activity>
+        <activity android:name="com.cpu.activity.LoginActivity"></activity>
+        <activity android:name="com.cpu.activity.MemberListActivity"></activity>
+        <activity android:name="com.cpu.activity.ConstellationListActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/register_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/pink" >
+        <ImageView 
+            android:layout_height="30dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_gravity="center"
+            android:src="@drawable/back_n"
+            android:id="@+id/login_back"/>
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:text="完整资料"
+            android:layout_weight="0.6"
+            android:textSize="20dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:layout_height="fill_parent" />
+
+        <TextView
+            android:id="@+id/finish"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:textColor="@color/white"
+            android:layout_weight="0.2"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="完成" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/content" >
+        <LinearLayout 
+		    android:layout_height="wrap_content"
+		    android:layout_width="fill_parent" 
+		    android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <com.example.view.RoundImageViewByXfermode
+                    android:id="@+id/photo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="36dp"
+                    android:src="@drawable/photo" />
+
+            </RelativeLayout>
+
+	 		<LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="50dp"
+	            android:orientation="horizontal">
+		        <TextView 
+		            android:layout_height="fill_parent"
+		            android:layout_weight="0.3"
+		            android:text="性别"
+		            android:textSize="20dp"
+		            android:gravity="center"
+		            android:layout_width="0dp"/>
+		        <LinearLayout 
+		            android:layout_height="fill_parent"
+		            android:layout_weight="0.7"
+		            android:gravity="center"
+		            android:layout_width="0dp">
+
+		            <RadioButton
+		                android:id="@+id/radioButton1"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_weight="0.5"
+		                android:text="男" />
+
+		            <RadioButton
+		                android:id="@+id/radioButton2"
+		                android:layout_width="wrap_content"
+		                android:layout_weight="0.5"
+		                android:layout_height="wrap_content"
+		                android:text="女" />
+		            
+		          </LinearLayout>
+		      </LinearLayout>
+		      <TextView 
+	            android:layout_height="1dp"
+	            android:layout_width="fill_parent"
+	            android:background="@color/themegray"/>
+	        
+	 		<LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="50dp"
+	            android:orientation="horizontal">
+		        <TextView 
+		            android:layout_height="fill_parent"
+		            android:layout_weight="0.3"
+		            android:text="姓名"
+		            android:textSize="20dp"
+		            android:gravity="center"
+		            android:layout_width="0dp"/>
+		        <EditText 
+		            android:layout_height="fill_parent"
+		            android:background="@null"
+		            android:gravity="center"
+			        android:layout_weight="0.7"
+		            android:layout_width="0dp" />
+		      </LinearLayout>
+		
+	        <TextView 
+	            android:layout_height="1dp"
+	            android:layout_width="fill_parent"
+	            android:background="@color/themegray"/>
+	        
+	 		<LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="50dp"
+	            android:orientation="horizontal">
+		        <TextView 
+		            android:layout_height="fill_parent"
+		            android:layout_weight="0.3"
+		            android:text="出生日期"
+		            android:textSize="20dp"
+		            android:gravity="center"
+		            android:layout_width="0dp"/>
+		        <RelativeLayout 
+			            android:layout_weight="0.7" 
+			            android:layout_height="fill_parent"
+			            android:id="@+id/birthday_layout"
+			            android:layout_width="0dp">
+			        <EditText
+			            android:layout_height="fill_parent"
+			            android:layout_width="fill_parent"
+		            	android:background="@null"
+			            android:id="@+id/birth"/>
+
+			        <ImageView
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentBottom="true"
+			            android:layout_alignParentRight="true"
+			            android:src="@drawable/spinner_default_holo_light" />
+
+		        </RelativeLayout>		        
+		        
+		      </LinearLayout>
+		      <TextView 
+	            android:layout_height="1dp"
+	            android:layout_width="fill_parent"
+	            android:background="@color/themegray"/>
+	 		<LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="50dp"
+	            android:orientation="horizontal">
+		        <TextView 
+		            android:layout_height="fill_parent"
+		            android:layout_weight="0.3"
+		            android:text="学院"
+		            android:textSize="20dp"
+		            android:gravity="center"
+		            android:layout_width="0dp"/>
+				<EditText 
+		            android:layout_height="fill_parent"
+		            android:layout_weight="0.7"
+		            android:background="@null"
+		            android:layout_width="0dp"/>
+		      </LinearLayout>	
+		      <TextView 
+	            android:layout_height="1dp"
+	            android:layout_width="fill_parent"
+	            android:background="@color/themegray"/>
+		      <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="50dp"
+	            android:orientation="horizontal">
+		        <TextView 
+		            android:layout_height="fill_parent"
+		            android:layout_weight="0.3"
+		            android:text="交友宣言"
+		            android:textSize="20dp"
+		            android:gravity="center"
+		            android:layout_width="0dp"/>
+		        <EditText 
+		            android:layout_height="fill_parent"
+		            android:layout_weight="0.7"
+		            android:background="@null"
+		            android:layout_width="0dp"/>
+		      </LinearLayout>	
+		      <TextView 
+	            android:layout_height="1dp"
+	            android:layout_width="fill_parent"
+	            android:background="@color/themegray"/>	      		      		      
+ 		</LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

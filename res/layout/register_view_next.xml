@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/blue"
+            >
+            <ImageView
+                android:id="@+id/register_next_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/selector_back_img" 
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="设置密码"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/register_next_edit_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/input"
+            android:gravity="left|center_vertical"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textSize="20sp" 
+            android:textColor="#080808"
+            android:textCursorDrawable="@drawable/edittext_cursor"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:padding="5dp" >
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="确认密码"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/register_next_edit_pwd_again"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/input"
+            android:gravity="left|center_vertical"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textSize="20sp" 
+            android:textColor="#080808"
+            android:textCursorDrawable="@drawable/edittext_cursor"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <Button
+            android:id="@+id/register_next_btn_sure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_bg_blue"
+            android:padding="10dp"
+            android:text="下一步"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</LinearLayout>

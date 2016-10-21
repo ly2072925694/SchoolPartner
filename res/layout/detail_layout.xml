@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+  <include
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/nearLayout1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        layout="@layout/detail"
+        android:orientation="vertical" >
+    </include>
+
+    <RelativeLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="57dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/top"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@+id/main_title"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:id="@+id/main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阿宝"
+                android:textColor="@color/white"
+                android:textSize="30dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:id="@+id/botton"
+        android:layout_alignParentBottom="true"
+        android:background="@color/themegray"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/proveImage_layout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:focusable="false"
+                android:src="@drawable/dianzhan_01" />
+
+            <TextView
+                android:id="@+id/prove"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/person_image_layout"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:focusable="false"
+                android:src="@drawable/user" />
+
+            <TextView
+                android:id="@+id/person"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="6" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/message_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="申请加入" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/themegray"
+    android:fillViewport="true">
+     <ScrollView  
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/themegray"
+	    android:fillViewport="true"
+	    android:id="@+id/scroll"
+	    android:orientation="vertical" >
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            
+		    <android.support.v4.view.ViewPager
+	             android:id="@+id/vp"
+	             android:background="@color/yellow"
+	             android:layout_width="fill_parent"
+	             android:layout_height="200dp"
+	             />
+            <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+          	android:background="@drawable/line"
+            android:orientation="vertical">
+	        
+	        
+	        <LinearLayout 
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="20dp"
+	            android:layout_marginBottom="10dp"
+	            android:layout_marginTop="10dp"
+	            android:gravity="left"
+	            android:layout_width="fill_parent">
+	            <TextView 
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:textSize="20dp"
+	                android:id="@+id/title"
+	                android:textColor="@color/black"
+	                android:text="约吃饭"/>
+	        </LinearLayout>
+	        <LinearLayout 
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="20dp"
+                android:layout_width="fill_parent">
+                <LinearLayout 
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView 
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="发布日期："/>
+                    <TextView 
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/publish_time"
+                        android:text="2015-4-7"/>
+                </LinearLayout>
+                 
+	        </LinearLayout>
+			<LinearLayout 
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:layout_marginLeft="20dp"
+	            android:layout_marginTop="5dp"
+				android:id="@+id/two"
+				android:orientation="horizontal">
+				<TextView 
+				    android:layout_height="wrap_content"
+				    android:layout_width="wrap_content"
+				    android:text="活动日期："/>
+				<TextView 
+				    android:layout_height="wrap_content"
+				    android:layout_width="wrap_content"
+				    android:id="@+id/activity_time"
+				    android:text="2015-12-22---2015-12-25"/>
+			</LinearLayout>
+			
+	        <LinearLayout 
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="20dp"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginBottom="10dp"
+	            android:id="@+id/three"
+	            android:layout_width="fill_parent">
+	            <TextView 
+	                android:layout_height="wrap_content"
+	                android:layout_width="fill_parent"
+	                android:textColor="@color/black"
+	                android:id="@+id/public_content"
+	                android:text="快乐食间约，出了几个新菜，快乐食间约，出了几个菜，快乐食间约，出了几个新菜品……"/>
+	        </LinearLayout>
+	        
+	       </LinearLayout> 
+	       <LinearLayout 
+	           android:layout_marginTop="10dp"
+	           android:layout_width="fill_parent"
+	           android:background="@drawable/line"
+	           android:layout_height="wrap_content">
+	           <LinearLayout 
+		         android:layout_height="fill_parent"
+		         android:layout_marginLeft="10dp"
+		         android:layout_marginRight="5dp"
+		         android:orientation="vertical"
+		         android:layout_width="fill_parent">
+	            <RelativeLayout 
+	                android:layout_height="wrap_content"
+	                android:layout_width="fill_parent"
+	                android:layout_gravity="center_vertical"
+	                android:orientation="horizontal">
+			         <TextView 
+			             android:layout_height="wrap_content"
+			             android:layout_width="wrap_content"
+					     android:layout_marginTop="10dp"
+					     android:layout_marginLeft="5dp"
+					     android:layout_marginBottom="10dp"
+			             android:textColor="@color/black"
+			             android:text="评论 200"/>
+			         <ImageView
+			             android:layout_width="30dp"
+			             android:layout_height="wrap_content"
+			             android:layout_marginRight="5dp"
+			             android:id="@+id/edit"
+			             android:layout_alignParentRight="true"
+			             android:layout_alignParentTop="true"
+			             android:src="@drawable/wd_youji_1" />
+
+			         <TextView
+			             android:layout_width="wrap_content"
+			             android:layout_height="wrap_content"
+			             android:layout_centerVertical="true"
+			             android:layout_marginRight="5dp"
+			             android:layout_toLeftOf="@+id/edit"
+			             android:text="写评论 "
+			             android:textColor="@color/gray" />
+
+			        </RelativeLayout>
+			        <TextView
+			             android:layout_width="fill_parent"
+			             android:layout_height="1dp"
+			             android:background="@color/gray" />
+		         	<LinearLayout 
+			             android:layout_height="fill_parent"
+			             android:layout_width="fill_parent">
+			             <com.cpu.view.InnerListView
+			                 android:layout_height="fill_parent"
+			                 android:id="@+id/list"
+			             	 android:background="@drawable/string_line"
+			                 android:scrollbars="none"
+			                 android:divider="@color/black"  
+							 android:dividerHeight="1px"
+							 android:layout_width="fill_parent">
+			                 
+		            	 </com.cpu.view.InnerListView>
+		           </LinearLayout>
+	        </LinearLayout>
+	       </LinearLayout>
+	  	</LinearLayout>
+	     
+
+	</ScrollView>
+ 
+</RelativeLayout>
+

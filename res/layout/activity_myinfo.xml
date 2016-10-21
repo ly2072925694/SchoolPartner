@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cpu="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/ll_background"
+    android:background="@color/white"
+    android:orientation="vertical" 
+    xmlns:app="http://schemas.android.com/apk/res/com.example.schoolpartner">
+
+    <!-- 头部 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/blue" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selector_back_img" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="我的资料"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- 内容部分 -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ll_myinfo"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <!-- 头像 -->
+
+                
+
+                <!-- 自定义圆形ImageView
+                	border_width:图形边框 -->
+                    
+                <com.cpu.view.CircleImageView
+                    android:id="@+id/iv_head_photo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" 
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/test"
+                    app:border_width="0dp"
+                    app:border_color="@color/white"/> 
+                
+               <!--  <ImageView
+                    android:id="@+id/iv_head_photo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" 
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/test"/> -->
+                
+            </LinearLayout>
+
+           <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
+
+            <!-- 昵称 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="昵称"
+                    android:textColor="@color/black"
+                    
+                    android:textSize="@dimen/font_size_midle" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etxt_nick_name"
+                    android:background="@null"
+                    android:hint="最多10个字"
+                    android:maxLength="10"
+                    android:text="红豆"
+                    android:textColor="@color/gray"
+                    android:cursorVisible="true"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:textSize="@dimen/font_size_midle" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
+
+            <!-- 个人信息 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/icon_info" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="个人信息"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
+            
+
+            <!-- 真实姓名 --><!-- 暂时隐藏 -->
+			
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="真实姓名"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:id="@+id/etxt_real_name"
+                    android:cursorVisible="true"
+                    android:text="张三"
+                    android:maxLength="30"
+                    android:textColor="@color/gray"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:textSize="@dimen/font_size_midle" />
+            </LinearLayout>
+
+           
+            <!-- 性别:男，女，保密 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:id="@+id/ll_sex">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="性别"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/etxt_sex"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:text="女"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/font_size_midle" />
+                
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/icon_right" />
+            </LinearLayout>
+
+           
+
+            <!-- 出生日期 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll_birthday"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="出生日期"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/etxt_birthday"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="1995-10-10"
+                    android:textColor="@color/gray"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:textSize="@dimen/font_size_midle" />
+                
+                 <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/icon_right" />
+            </LinearLayout>
+
+            <!-- 星座 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll_Constellation"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="星座"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/etxt_Constellation"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="点击设置"
+                    android:textColor="@color/gray"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:textSize="@dimen/font_size_midle" />
+                
+                 <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/icon_right" />
+            </LinearLayout>
+          
+            <!-- 恋爱情况 :恋爱中，单身，保密，已婚 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ll_love_status"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="恋爱状况"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/etxt_love_status"
+                    android:background="@null"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:text="保密"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/font_size_midle" />
+                 <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/icon_right"/>
+            </LinearLayout>
+
+           
+
+            <!-- 学校 --><!-- 暂时隐藏 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="学校"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:text="重庆理工大学"
+                    android:maxLength="100"
+                    android:textColor="@color/gray"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:textSize="@dimen/font_size_midle" />
+            </LinearLayout>
+
+            
+            <!-- 邮箱 --><!-- 暂时隐藏 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="邮箱"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etxt_email"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:text="zzz@163.com"
+                    android:maxLength="100"
+                    android:textColor="@color/gray"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:textSize="@dimen/font_size_midle" />
+            </LinearLayout>
+            
+            <!-- 住址 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="住址"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etxt_address"
+                    android:background="@null"
+                    android:cursorVisible="true"
+                    android:text="重庆市"
+                    android:maxLength="100"
+                    android:textColor="@color/gray"
+                    android:textCursorDrawable="@drawable/edittext_cursor"
+                    android:textSize="@dimen/font_size_midle" />
+            </LinearLayout>
+
+            <!-- 兴趣爱好 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/icon_info" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="兴趣爱好"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp" 
+                android:id="@+id/rl_interesthoby">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="10dp"
+                    android:id="@+id/tv_interesthoby"
+                    android:textColor="@color/gray"
+                    android:hint="点击设置"
+                    android:textSize="@dimen/font_size_midle" />
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/icon_right" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
+            <!-- 交友宣言 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/icon_info" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="交友宣言"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_midle" />
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etxt_detail"
+                android:background="@drawable/edittext_border_normal"
+                android:gravity="top|left"
+                android:minLines="2"
+                android:hint="最多100个字"
+                android:maxLength="100"
+                android:padding="10dp"
+                android:text="我是阳光青年"
+                android:textColor="@color/gray"
+                android:textCursorDrawable="@drawable/edittext_cursor"
+                android:textSize="@dimen/font_size_midle" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

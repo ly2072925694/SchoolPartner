@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent" >
+	<RelativeLayout 
+		android:id="@+id/fragment_layout"
+		android:layout_height="40dp"
+		android:layout_alignParentTop="true"
+		android:background="@color/blue"
+		android:layout_width="fill_parent" >
+
+		<ImageView
+		    android:id="@+id/main_imageView1"
+		    android:layout_width="35dp"
+		    android:layout_height="35dp"
+		    android:layout_alignParentLeft="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginLeft="5dp"
+		    android:src="@drawable/install" />
+
+		<ImageView
+		    android:id="@+id/tixing"
+		    android:layout_width="35dp"
+		    android:layout_height="35dp"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:layout_marginRight="5dp"
+		    android:src="@drawable/tingxing2"
+		    
+		    />
+
+		<TextView
+		    android:id="@+id/main_title"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerHorizontal="true"
+		    android:layout_centerVertical="true"
+		    android:textColor="@color/white"
+		    android:textSize="30dp"
+		    android:text="约伴" />
+
+		<ImageView
+		    android:id="@+id/tip_message"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignRight="@+id/tixing"
+		    android:layout_alignTop="@+id/main_imageView1"/>
+
+	</RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_linearlayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/fragment_layout" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/main_linearlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+ 		android:background="@color/blue"
+        android:orientation="horizontal">
+        <RelativeLayout 
+            android:id="@+id/homepage_layout" 
+            android:layout_width="0.0dip" 
+            android:layout_height="fill_parent" 
+            android:layout_weight="1.0">
+            <LinearLayout 
+                android:orientation="vertical" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/homepage_image"
+                    android:layout_width="30dp"
+                    android:layout_height="27dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/sb" />
+
+                <TextView 
+                    android:textColor="@color/white" 
+                    android:layout_gravity="center_horizontal" 
+                    android:id="@+id/homepage_text" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/homepage" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout 
+            android:id="@+id/add_layout" 
+            android:layout_width="0.0dip" 
+            android:layout_height="fill_parent" 
+            android:layout_weight="1.0">
+            <LinearLayout 
+                android:orientation="vertical" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                android:layout_centerVertical="true">
+                <ImageView 
+                    android:layout_gravity="center_horizontal" 
+                    android:id="@+id/add_image"
+                    android:src="@drawable/jiahao"  
+                    android:layout_width="30dp" 
+                    android:layout_height="30dp" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout 
+            android:id="@+id/person_layout" 
+            android:layout_width="0.0dip" 
+            android:layout_height="fill_parent" 
+            android:layout_weight="1.0" >
+            <LinearLayout 
+                android:orientation="vertical" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                android:layout_centerVertical="true">
+                <RelativeLayout 
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent">
+
+	                <ImageView
+	                    android:id="@+id/person_image"
+	                    android:layout_width="42dp"
+	                    android:layout_height="27dp"
+					    android:layout_centerHorizontal="true"
+					    android:layout_centerVertical="true"
+	                    android:src="@drawable/mine" />
+
+	                <ImageView
+	                    android:id="@+id/person_tips"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_alignTop="@+id/person_image"
+	                    android:layout_toRightOf="@+id/person_image" />
+
+				</RelativeLayout>
+                <TextView 
+                    android:textColor="@color/white" 
+                    android:layout_gravity="center_horizontal" 
+                    android:id="@+id/person_text" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="@string/person" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+    
+    <!-- 头部 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:background="@color/blue" >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="星座"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:text="保存"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+    <!-- 星座列表 -->
+    <ListView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        android:divider="@color/gray"
+        android:id="@+id/lv_constellation">
+        
+    </ListView>
+
+</LinearLayout>

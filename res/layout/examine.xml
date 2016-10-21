@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.42" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/imageView1"
+            android:layout_marginLeft="24dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="小学"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="19dp"
+            android:src="@drawable/user" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView1"
+            android:layout_alignLeft="@+id/textView1"
+            android:text="21 女  重庆，九龙坡"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignTop="@+id/textView1"
+            android:layout_toRightOf="@+id/textView1"
+            android:src="@drawable/woman" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/blue"
+            android:layout_alignTop="@+id/imageView2"
+            android:layout_marginRight="16dp"
+            android:text="同意" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignRight="@+id/textView3"
+            android:text="拒绝" />
+
+    </RelativeLayout>
+
+</LinearLayout>

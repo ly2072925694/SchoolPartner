@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent">
+
+        <ImageView
+            android:id="@+id/user_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/test" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/user_photo"
+            android:text="立即登录" />
+        
+    </RelativeLayout>
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+	    android:layout_marginTop="10dp"
+	    android:layout_marginBottom="10dp"
+        android:layout_width="fill_parent">
+	    <TextView 
+	        android:layout_width="160dp"
+	        android:layout_height="1dp"
+	        android:layout_gravity="center"
+	        android:background="@color/gray"/>
+	    <LinearLayout 
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_gravity="center"
+	        android:orientation="horizontal">
+	        <TextView 
+		        android:layout_width="1dp"
+		        android:layout_height="30dp"
+		        android:background="@color/gray"/>
+	        <TextView 
+	            android:layout_height="30dp"
+	            android:layout_width="80dp"
+	            android:gravity="center"
+	            android:layout_gravity="center"
+	            android:id="@+id/publish"
+	            android:text="我发布的"/>
+	        <TextView 
+		        android:layout_width="1dp"
+		        android:layout_height="30dp"
+		        android:background="@color/gray"/>
+	        <TextView 
+	            android:layout_height="30dp"
+	            android:layout_width="80dp"
+	            android:gravity="center"
+	            android:id="@+id/join"
+	            android:layout_gravity="center"
+	            android:text="我参与的"/>
+	        <TextView 
+		        android:layout_width="1dp"
+		        android:layout_height="30dp"
+		        android:background="@color/gray"/>
+	    </LinearLayout>
+	    <TextView 
+	        android:layout_width="160dp"
+	        android:layout_height="1dp"
+	        android:layout_gravity="center"
+	        android:background="@color/gray"/>
+	</LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+	    android:id="@+id/person_info_linear"
+	    android:layout_height="fill_parent"
+	    android:orientation="horizontal"
+	    android:background="@color/themegray"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"
+	    android:layout_width="fill_parent">
+	    <ListView
+	        android:id="@+id/person_info_list"
+	        android:layout_width="fill_parent"
+	        android:scrollbars="none"
+	        android:descendantFocusability="blocksDescendants"
+	        android:divider="@null"
+	        android:layout_height="fill_parent" >
+	        </ListView>
+	        
+	</android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

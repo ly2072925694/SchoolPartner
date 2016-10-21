@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+   <!--  translate中只做了垂直位移的效果，别的效果
+		<alpha />        透明度	
+		<rotate />       旋转	
+		<scale />        缩放 
+	-->
+    <translate 
+        android:toYDelta="100%p"
+        android:duration="300"/>
+	<!-- %p指相对于父容器  
+		-100%p:屏幕顶部
+		0%p：屏幕底部
+		100%p:从屏幕底部向下移动距离=屏幕高度的位置(即-1屏幕的底部)
+		duration: 持续时间    
+	-->
+</set>
